@@ -22,5 +22,18 @@ export default defineNuxtConfig({
      * @default "./components/ui"
      */
     componentDir: './components/ui'
+  },
+  runtimeConfig: {
+    mongoUri: process.env.MONGODB_URI,
+    jwtSecret: process.env.JWT_SECRET,
+    jwtExpiresIn: process.env.JWT_EXPIRES_IN,
+    public: {
+      apiBase: '/api'
+    }
+  },
+  nitro: {
+    experimental: {
+      wasm: true
+    }
   }
 })
