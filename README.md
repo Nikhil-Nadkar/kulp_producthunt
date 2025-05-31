@@ -1,75 +1,70 @@
-# Nuxt Minimal Starter
+# Product Hunt Clone – Technical Assignment
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## 🛠 Tech Stack
 
-## Setup
+* **Frontend**: Nuxt 3 (Vue 3 Composition API)
+* **UI Components**: Vue Shadcn (Tailwind CSS-based)
+* **Backend**: Express.js
+* **Database**: MongoDB with Mongoose
 
-Make sure to install dependencies:
+## ✅ Completed Features
+
+### Frontend (Nuxt 3)
+
+* UI implementation for:
+
+  * Authentication pages (Login/Register)
+  * Product submission form
+  * Explore/home page layout
+  * Product detail page structure
+
+### Backend (Express.js + MongoDB)
+
+* JWT-based authentication (Register/Login)
+* Auth middleware
+* API Routes:
+
+  * `POST /auth/register`
+  * `POST /auth/login`
+  * `POST /products` (protected)
+  * `GET /products` (all products)
+  * `GET /products/:id` (single product)
+
+## ❌ Pending
+
+* Full frontend-backend integration (API connection)
+* Upvote and comment systems
+* Deployment to Vercel/Render
+
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
 
 ```bash
-# npm
+git clone https://github.com/Nikhil-Nadkar/kulp_producthunt
+cd kulp_producthunt
+```
+
+### 2. Install dependencies
+
+```
 npm install
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
+### 3. Create `.env` file for backend
 
-Start the development server on `http://localhost:3000`:
+Create a `.env` file inside the `main` directory with the following variables:
 
-```bash
-# npm
+```
+MONGO_URI=your_mongo_connection_string
+JWT_SECRET=your_jwt_secret_key
+```
+
+### 4. Run the project
+
+```
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
